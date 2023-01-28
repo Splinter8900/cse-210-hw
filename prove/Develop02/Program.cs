@@ -12,13 +12,17 @@ class Program
             Console.WriteLine("3. Load the journal from a file");
             Console.WriteLine("4. Save the journal to a file");
             Console.WriteLine("5. Exit");
+
             int choice = int.Parse(Console.ReadLine());
+
             if (choice == 1)
             {
                 Entry newEntry = new Entry();
                 newEntry._prompt = GetRandomPrompt();
                 Console.WriteLine(newEntry._prompt);
                 newEntry._response = Console.ReadLine();
+                Console.WriteLine("Where are you right now?");
+                newEntry._place = Console.ReadLine();
                 DateTime theCurrentTime = DateTime.Now;
                 newEntry._date = theCurrentTime.ToShortDateString();
                 journal._entries.Add(newEntry);
