@@ -10,11 +10,11 @@ public class Scripture{
     //setters and gettersk ml c
     private Reference _reference;
 
-    private Reference getRef(){
+    private Reference GetRef(){
         return _reference;
     }
 
-    public void setRef(Reference reference){
+    public void SetRef(Reference reference){
         _reference = reference;
     }
 
@@ -24,7 +24,7 @@ public class Scripture{
         return _words;
     }
 
-    private void setList(string scripture){
+    private void SetList(string scripture){
         _words = NewWordList(scripture);
 
     }

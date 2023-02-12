@@ -7,13 +7,13 @@ public class Word {
     }
 
     // getters and setters
-    private string _word;
-    
-    private string getWord(){
+
+        private string _word;
+    private string GetWord(){
         return _word;
     }
 
-    public void setWord(string word){
+    public void SetWord(string word){
         _word = word;
     }
 
