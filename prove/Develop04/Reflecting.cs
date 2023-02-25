@@ -17,7 +17,9 @@ public class Reflecting : Activity{
         };
         Random random = new Random();
         int index = random.Next(prompts.Count);
-        return prompts[index];
+        string randPrompt = prompts[index];
+        prompts.Remove(randPrompt);
+        return randPrompt;
         }
 
     public void DisplayRandomPrompt(){
