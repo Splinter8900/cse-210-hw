@@ -7,7 +7,7 @@ public class Scripture{
         _words = NewWordList(scripture);
 
     }
-    //setters and gettersk ml c
+    //setters and getters
     private Reference _reference;
 
     private Reference GetRef(){
