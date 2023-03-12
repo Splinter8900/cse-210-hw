@@ -20,7 +20,7 @@ public class GoalFiles
             file.WriteLine(points);
             foreach (Goal line in goals)
             {
-                file.WriteLine(line.DisplayGoal());
+                file.WriteLine(line.DisplayGoalString());
             }
         }
     }
@@ -82,7 +82,7 @@ public class GoalFiles
                 foreach(Goal goal in goals)
                 {
                     x++;
-                    goal.ShowGoal(x);
+                    goal.DisplayGoal(x);
                 }
                 Console.Write("Which goal would you like to record? ");
                 int input = int.Parse(Console.ReadLine());

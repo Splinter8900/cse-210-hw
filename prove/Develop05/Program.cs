@@ -1,5 +1,7 @@
 using System;
 
+using System.Collections.Generic;
+
 class Program
 {
     static void Main(string[] args)
@@ -64,14 +66,20 @@ class Program
 
             else if (quit == 2)
             {
-                int x = 0;
-                foreach (Goal goal in goals)
+                if (goals.Count == 0)
                 {
-                    x++;
-                    goal.ShowGoal(x);
-                }    
+                    Console.WriteLine("You have not created any goals yet.");
+                }
+                else
+                {
+                    int x = 0;
+                    foreach (Goal goal in goals)
+                    {   
+                        x++;
+                        goal.DisplayGoal(x);   
+                    }  
+                }  
             }
-
             else if (quit == 3)
             {
                 file.Save(goals, points);

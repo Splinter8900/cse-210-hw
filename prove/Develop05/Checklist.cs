@@ -31,7 +31,7 @@ public class Checklist : Goal
         _bonusPoints = int.Parse(Console.ReadLine());
     }
 
-    public override void ShowGoal(int goalNumber)
+    public override void DisplayGoal(int goalNumber)
     {
         string checkBox = "[]";
         if (_isComplete)
@@ -47,7 +47,7 @@ public class Checklist : Goal
         }
     }
 
-        public override string DisplayGoal()
+        public override string DisplayGoalString()
     {
         string goal = $"ChecklistGoal|{_name}|{_desc}|{_points}|{_isComplete}|{_currentCount}/{_targetCount}|{_bonusPoints}";
         return goal;

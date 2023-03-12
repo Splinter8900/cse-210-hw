@@ -16,7 +16,7 @@ public class Eternal : Goal
     public override void RecordEvent()
     {}
 
-    public override string DisplayGoal()
+    public override string DisplayGoalString()
     {
         string goal = $"EternalGoal|{_name}|{_desc}|{_points}|{_isComplete}";
         return goal;

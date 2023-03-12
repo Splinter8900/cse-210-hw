@@ -18,7 +18,7 @@ public class Simple : Goal
         _isComplete = true;
     }
 
-    public override void ShowGoal(int goalNumber)
+    public override void DisplayGoal(int goalNumber)
     {
         string checkBox = "[]";
         if (_isComplete)
@@ -26,7 +26,7 @@ public class Simple : Goal
         Console.WriteLine($"{goalNumber}. {checkBox} {_name} ({_desc})");
     }
 
-    public override string DisplayGoal()
+    public override string DisplayGoalString()
     {
         string goal = $"SimpleGoal|{_name}|{_desc}|{_points}|{_isComplete}";
         return goal;

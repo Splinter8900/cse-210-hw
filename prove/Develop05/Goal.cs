@@ -36,7 +36,7 @@ public abstract class Goal
     public void GoalPoints()
     {
         Console.WriteLine("How many points is this goal worth?:");
-        Console.ReadLine();
+        _points = int.Parse(Console.ReadLine());
     }
 
     public int GetPoints()
@@ -54,14 +54,19 @@ public abstract class Goal
         return _isComplete;
     }
 
-    public virtual void ShowGoal (int goalNumber)
+    public virtual void DisplayGoal (int goalNumber)
+    {
+        Console.WriteLine($"{goalNumber}. {_name} ({_desc})");
+    }
+
+    public virtual void DisplayGoalSimple(int goalNumber)
     {
         Console.WriteLine($"{goalNumber}. {_name}");
     }
 
-    public virtual string DisplayGoal()
+    public virtual string DisplayGoalString()
     {
-        string goal = $"{_name}: {_desc}: {_points}{ _isComplete}";
+        string goal = $"{_name}|{_desc}| {_points}|{ _isComplete}";
         return goal;
     }
 }
