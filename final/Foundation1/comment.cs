@@ -5,8 +5,10 @@ public class Comment
 
 
 
-    public void DisplayComment()
+    public Comment(string name, string comment)
     {
-        Console.WriteLine($"{_name}:{_comment}");
+        _name = name;
+        _comment = comment;
     }
+    
 }
