@@ -1,16 +1,21 @@
 public class Video
 {
-    private string _title;
-    private string _author;
-    private int _length;
+    public string _title;
+    public string _author;
+    public int _length;
 
-    private List<Comment> _comments = new List<Comment>();
+    public List<Comment> _comments = new List<Comment>();
 
-    public void DisplayVideo()
-    {
-        Console.WriteLine($"title:{_title}");
-        Console.WriteLine($"title:{_author}");
-        Console.WriteLine($"title:{_length}");
+    public void Display()
+    {   
+        Console.WriteLine($"Title:{_title}");
+        Console.WriteLine($"Author:{_author}");
+        Console.WriteLine($"title:{_length} seconds");
+        foreach (Comment comment in _comments)
+        {
+            comment.DisplayComment();
+        }
     }
 
+    
 }
