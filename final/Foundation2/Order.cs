@@ -6,8 +6,8 @@ class Order {
 
     public Order(Customer customer, Product[] products) 
     {
-        this._customer = customer;
-        this._products = products;
+        _customer = customer;
+        _products = products;
     }
 
     public string PackingLabel() 
@@ -31,7 +31,7 @@ class Order {
             totalPrice += p.CalculatePrice();
         }
         double shippingFee;
-        if (_customer.IsInUSA())
+        if (_customer.InCountry())
         {
             shippingFee = 5;
         }

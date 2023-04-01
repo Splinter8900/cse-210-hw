@@ -8,10 +8,10 @@ class Product {
 
     public Product(string item, int productId, double price, int quantity) 
     {
-        this._item = item;
-        this._productId = productId;
-        this._price = price;
-        this._quantity = quantity;
+        _item = item;
+        _productId = productId;
+        _price = price;
+        _quantity = quantity;
     }
 
     public double Price() 

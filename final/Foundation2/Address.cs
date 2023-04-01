@@ -9,11 +9,11 @@ class Address {
     private string _zipCode;
 
     public Address(string street, string city, string state, string zip, string country) {
-        this._street = street;
-        this._city = city;
-        this._state = state;
-        this._zipCode = zip;
-        this._country = country;
+        _street = street;
+        _city = city;
+        _state = state;
+        _zipCode = zip;
+        _country = country;
         
     }
 
@@ -22,7 +22,7 @@ class Address {
          return $"   {_street}\n   {_city}, {_state} {_zipCode}\n   {_country}"; 
     }
 
-    public bool IsInUSA() {
+    public bool InCountry() {
         return _country.Equals("USA");
     }
 }
